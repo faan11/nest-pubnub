@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "pub-nub": {
+      "type": "library",
+      "root": "libs/pub-nub",
+      "entryFile": "index",
+      "sourceRoot": "libs/pub-nub/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/pub-nub/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}

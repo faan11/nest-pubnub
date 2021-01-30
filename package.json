@@ -1,0 +1,32 @@
+{
+  "name": "nest-pubnub",
+  "version": "0.0.1",
+  "description": "PubNub module for Nestjs framework",
+  "main": "libs/pub-nub/src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faan11/nest-pubnub.git"
+  },
+  "keywords": [
+    "pubnub",
+    "nodejs",
+    "nestjs",
+    "chat",
+    "typescript"
+  ],
+  "author": "faan11",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faan11/nest-pubnub/issues"
+  },
+  "homepage": "https://github.com/faan11/nest-pubnub#readme",
+  "dependencies": {
+    "pubnub": "^4.29.11"
+  },
+  "devDependencies": {
+    "@types/pubnub": "^4.29.0"
+  }
+}
