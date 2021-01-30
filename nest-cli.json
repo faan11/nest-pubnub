@@ -1,7 +1,31 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/nest-pubnub/src",
+  "monorepo": true,
+  "root": "apps/nest-pubnub",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nest-pubnub/tsconfig.app.json"
+  },
   "projects": {
+    "nest-pubnub": {
+      "type": "application",
+      "root": "apps/nest-pubnub",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-pubnub/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-pubnub/tsconfig.app.json"
+      }
+    },
+    ".": {
+      "type": "application",
+      "root": "apps",
+      "entryFile": "main",
+      "sourceRoot": "apps/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/tsconfig.app.json"
+      }
+    },
     "pub-nub": {
       "type": "library",
       "root": "libs/pub-nub",
@@ -11,8 +35,5 @@
         "tsConfigPath": "libs/pub-nub/tsconfig.lib.json"
       }
     }
-  },
-  "compilerOptions": {
-    "webpack": true
   }
 }
