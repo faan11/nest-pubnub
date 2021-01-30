@@ -1,9 +1,10 @@
+import { PubNubModule } from '@app/pub-nub';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
-  imports: [],
+  imports: [PubNubModule],
   controllers: [AppController],
   providers: [AppService],
 })
