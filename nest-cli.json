@@ -1,4 +1,6 @@
 {
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
   "projects": {
     "pub-nub": {
       "type": "library",

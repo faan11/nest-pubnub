@@ -1,15 +1,29 @@
-import { Module } from '@nestjs/common';
+import { DynamicModule, Module, Provider } from '@nestjs/common';
 import { PubNubService } from './pub-nub.service';
+import * as PubNub from 'pubnub'
 import Pubnub from 'pubnub';
 
 @Module({
-  providers: [PubNubService],
-  useFactory: async (options) => {
-    return new Pubnub(options);
-  },
+  providers:[ {
+    provide: PubNubService,
+    useFactory: async (options: Pubnub.Config) => {
+      return new PubNub(options);
+    },
+    inject: ['CONFIG_OPTIONS'],
+  }],
   exports: [PubNubService],
-  inject: [Pubnub.PubnubConfig]
 })
-export class PubNubModule extends Pubnub {
+export class PubNubModule  {
+  static register(options: PubNub.Config): DynamicModule {
+    return {
+      module: PubNubModule,
+      providers: [
+        {
+          provide: 'CONFIG_OPTIONS',
+          useValue: options,
+        },
+      ],
+    };
+  }
 
 }
