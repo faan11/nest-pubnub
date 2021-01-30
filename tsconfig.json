@@ -12,10 +12,10 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
-      "@app/pub-nub": [
+      "@nest/pub-nub": [
         "libs/pub-nub/src"
       ],
-      "@app/pub-nub/*": [
+      "@nest/pub-nub/*": [
         "libs/pub-nub/src/*"
       ]
     }

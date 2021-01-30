@@ -1,5 +1,5 @@
 {
-  "name": "@app/nest-pubnub",
+  "name": "@nest/pub-nub",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -70,8 +70,8 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "@app/pub-nub/(.*)": "<rootDir>/libs/pub-nub/src/$1",
-      "@app/pub-nub": "<rootDir>/libs/pub-nub/src"
+      "@nest/pub-nub/(.*)": "<rootDir>/libs/pub-nub/src/$1",
+      "@nest/pub-nub": "<rootDir>/libs/pub-nub/src"
     }
   }
 }
